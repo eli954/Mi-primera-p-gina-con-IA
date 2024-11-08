@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agencia de Viajes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1,
+        h2 {
+            color: #333;
+        }
+
+        .viaje {
+            display: flex;
+            margin-bottom: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        .viaje img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-right: 20px;
+        }
+
+        .viaje-info {
+            flex: 1;
+        }
+
+        .viaje-info h3 {
+            color: #333;
+        }
+
+        .viaje-info p {
+            color: #555;
+        }
+
+        .btn-contacto {
+            display: inline-block;
+            margin-top: 20px;
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .btn-contacto:hover {
+            background-color: #555;
+        }
+
+        .formulario-contacto {
+            display: none;
+            background-color: #fff;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Agencia de Viajes - Explora el Mundo</h1>
+        <p>¡Haz realidad tu próxima aventura!</p>
+    </header>
+
+    <main>
+        <!-- Viaje 1 -->
+        <section class="viaje">
+            <img src="https://images.trvl-media.com/lodging/1000000/580000/576500/576421/f1dce420_w.jpg"
+                alt="Destino 1">
+            <div class="viaje-info">
+                <h3>Viaje a Ixtapa</h3>
+                <p>Disfruta y date tus vacaciones merecidas</p>
+                <p><strong>Duración:</strong> 7 días | <strong>Precio:</strong> $1,200</p>
+                <a href="#" class="btn-contacto" onclick="mostrarFormulario()">Contáctanos para más información</a>
+            </div>
+        </section>
+
+        <!-- Viaje 2 -->
+        <section class="viaje">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbeoc1g5uzPBZD9FkZrhPOKUoIeVbEcyFjeA&s"
+                alt="Destino 2">
+            <div class="viaje-info">
+                <h3>Escapada a la Playa de Cancún</h3>
+                <p>Relájate en las hermosas playas de Cancún y disfruta de actividades acuáticas.</p>
+                <p><strong>Duración:</strong> 5 días | <strong>Precio:</strong> $850</p>
+                <a href="#" class="btn-contacto" onclick="mostrarFormulario()">Contáctanos para más información</a>
+            </div>
+        </section>
+
+        <!-- Viaje 3 -->
+        <section class="viaje">
+            <img
+                src=https://ap-cdn.sfo3.cdn.digitaloceanspaces.com/uploads/2023/09/feria-esfera-tlalpujahua-pueblo-magico.jpg>
+            <div class="viaje-info">
+                <h3>Viaje a tlapujahua</h3>
+                <p>Ven a comprar tus esferas y adornos navideños</p>
+                <p><strong>Duración:</strong> 1 día1 | <strong>Precio:</strong> $950</p>
+                <a href="#" class="btn-contacto" onclick="mostrarFormulario()">Contáctanos para más información</a>
+            </div>
+        </section>
+
+        <!-- Formulario de contacto -->
+        <div class="formulario-contacto" id="formulario-contacto">
+            <h2>Contacto</h2>
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+                </div>
+                <input type="submit" value="Enviar">
+            </form>
+        </div>
+    </main>
+
+    <script>
+        function mostrarFormulario() {
+            var formulario = document.getElementById('formulario-contacto');
+            formulario.style.display = 'block';
+        }
+    </script>
+</body>
+
+</html>
